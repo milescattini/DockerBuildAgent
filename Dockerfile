@@ -37,6 +37,9 @@ RUN apt-get install -y wget apt-transport-https \
   && add-apt-repository universe \
   && apt-get install -y powershell 
 
+# Install SQL Package 
+RUN apt-get install libunwind8 \
+  && apt-get install libicu60
 
 # Install AZ Modules
  RUN pwsh -command Install-Module az -force
